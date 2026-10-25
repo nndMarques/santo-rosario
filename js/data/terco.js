@@ -170,3 +170,47 @@ export const PARTES = {
     it: (k) => `${ORDINAIS.it[k]} mistero`,
   },
 };
+
+// Explicação curta de cada mistério, para quem está começando. Os textos seguem os Evangelhos e o Catecismo.
+export const EXPLICACOES = {
+  gozosos: {
+    resumo: 'A infância de Jesus. Contemplamos a alegria da Encarnação: Deus se faz um de nós.',
+    itens: [
+      'O anjo Gabriel anuncia a Maria que ela será a mãe do Filho de Deus. Ela responde: “Faça-se em mim segundo a tua palavra”. Contemplamos a humildade e a confiança de Maria.',
+      'Maria, grávida, vai às pressas ajudar a prima Isabel. João salta no ventre da mãe, e Maria canta o Magnificat. Contemplamos a caridade que serve.',
+      'Jesus nasce em Belém, numa manjedoura, e os pastores são os primeiros a adorá-lo. Contemplamos a pobreza com que Deus escolheu vir ao mundo.',
+      'Maria e José levam o Menino ao Templo, como mandava a Lei. Simeão reconhece Jesus como luz para as nações e anuncia a Maria que uma espada lhe transpassará a alma. Contemplamos a oferta de Jesus ao Pai.',
+      'Aos doze anos, Jesus fica em Jerusalém e é encontrado três dias depois, entre os doutores do Templo. Depois volta a Nazaré e vive obediente a Maria e José. Contemplamos a busca de Jesus e a vida simples de Nazaré.',
+    ],
+  },
+  luminosos: {
+    resumo: 'A vida pública de Jesus. Contemplamos os momentos em que ele se revela. São os mistérios da luz, acrescentados por São João Paulo II em 2002.',
+    itens: [
+      'No rio Jordão, Jesus é batizado por João. O céu se abre, o Espírito desce como pomba e o Pai diz: “Este é o meu Filho amado”. Contemplamos o nosso próprio batismo.',
+      'Numa festa de casamento, a pedido de Maria, Jesus transforma água em vinho, o primeiro dos seus sinais. Maria diz aos serventes: “Fazei tudo o que ele vos disser”. Contemplamos a intercessão de Maria.',
+      'Jesus percorre a Galileia anunciando: “O Reino de Deus está próximo; convertei-vos e crede no Evangelho”. Ele cura, ensina e perdoa pecados. Contemplamos o chamado à conversão.',
+      'No alto do monte, diante de Pedro, Tiago e João, o rosto de Jesus brilha como o sol, e o Pai diz: “Este é o meu Filho; escutai-o”. Contemplamos a glória que nos espera e a importância de escutar Jesus.',
+      'Na Última Ceia, Jesus toma o pão e o vinho e os entrega como o seu Corpo e o seu Sangue. Contemplamos o dom da Eucaristia, que a Igreja celebra em cada Missa.',
+    ],
+  },
+  dolorosos: {
+    resumo: 'A Paixão de Jesus. Contemplamos o seu sofrimento, aceito por amor a nós.',
+    itens: [
+      'No Jardim das Oliveiras, Jesus reza com angústia e diz ao Pai: “Não se faça a minha vontade, mas a tua”. Os discípulos dormem. Contemplamos a oração na hora da prova.',
+      'Por ordem de Pilatos, Jesus é açoitado. Ele aceita o sofrimento sem se defender. Contemplamos o preço do nosso pecado e a sua mansidão.',
+      'Os soldados vestem Jesus com um manto, colocam-lhe na cabeça uma coroa de espinhos e zombam dele como rei. Contemplamos o Rei que reina pela humildade.',
+      'Jesus carrega a própria cruz até o Calvário. No caminho, Simão de Cirene é obrigado a ajudá-lo. Contemplamos como carregar as nossas cruzes junto com ele.',
+      'Jesus é crucificado. Perdoa os que o matam, promete o paraíso ao bom ladrão, entrega Maria como mãe a João e diz: “Pai, em tuas mãos entrego o meu espírito”. Contemplamos o amor que se entrega até o fim.',
+    ],
+  },
+  gloriosos: {
+    resumo: 'A vitória de Cristo e a glória que nos espera. Contemplamos a esperança da vida eterna.',
+    itens: [
+      'No terceiro dia, as mulheres vão ao túmulo e o encontram vazio. O anjo diz: “Ele ressuscitou”. Contemplamos a fé na vida que vence a morte.',
+      'Quarenta dias depois da Páscoa, Jesus sobe ao céu diante dos apóstolos e promete: “Eu estou convosco todos os dias”. Contemplamos a esperança do céu.',
+      'Maria e os apóstolos estão reunidos em oração quando o Espírito Santo desce em línguas de fogo. Nasce a Igreja missionária. Contemplamos o dom do Espírito Santo.',
+      'Ao fim de sua vida na terra, Maria é elevada em corpo e alma à glória do céu, como a Igreja crê desde os primeiros séculos. Contemplamos a nossa própria esperança da ressurreição.',
+      'Maria é coroada Rainha do céu e da terra, junto ao seu Filho. Contemplamos a sua intercessão por nós, seus filhos.',
+    ],
+  },
+};
