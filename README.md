@@ -8,7 +8,7 @@ Aprenda a rezar o terço e reze todos os dias.
 - **Lembrete** diário (calendário do celular e aviso do navegador).
 - **Privacidade:** sem conta, sem servidor. Tudo fica guardado só no aparelho.
 
-Feito a partir do [Lumen](https://github.com/nndMarques/lumen), só com a parte do terço.
+Feito a partir do [Lumen](https://github.com/ocatolico-marques/lumen), só com a parte do terço.
 
 ## Rodar no computador
 
