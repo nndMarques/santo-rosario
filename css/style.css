@@ -80,6 +80,7 @@
 /* ---------- Base ---------- */
 * { box-sizing: border-box; }
 html, body { margin: 0; }
+html { background: var(--bg); }
 /* nada pode empurrar a página para os lados (as animações de zoom e de deslizar passam um pouco da tela) */
 html, body { overflow-x: clip; }
 @supports not (overflow: clip) { body { overflow-x: hidden; } }
@@ -95,20 +96,6 @@ body {
   min-height: 100dvh;
 }
 /* textura de papel, só no tema claro */
-body::before {
-  content: "";
-  position: fixed; inset: 0;
-  background-image: var(--grain);
-  mix-blend-mode: multiply;
-  opacity: 0.55;
-  pointer-events: none;
-  z-index: 60;
-}
-/* moldura de página, só no tema claro */
-body::after {
-  content: ""; position: fixed; inset: 7px; border: var(--pag-borda);
-  pointer-events: none; z-index: 59;
-}
 a { color: inherit; }
 ::selection { background: var(--sel-bg); color: var(--sel-ink); }
 html { scrollbar-color: var(--muted) transparent; }
@@ -685,9 +672,16 @@ p { margin: 0 0 12px; }
   z-index: 10;
   display: flex; justify-content: center;
   padding-bottom: env(safe-area-inset-bottom);
-  background: var(--tab-bg);
+  background-color: var(--tab-bg);
   border-top: var(--tab-borda);
   transition: background-color 0.4s var(--ease);
+  /* camada própria e fundo opaco: evita que o conteúdo apareça por trás no Safari do iPhone */
+  -webkit-transform: translateZ(0); transform: translateZ(0);
+  -webkit-backface-visibility: hidden; backface-visibility: hidden;
+}
+@media (max-width: 899px) {
+  /* cobre a faixa que o Safari mostra quando a barra do navegador encolhe ao rolar */
+  .tabbar { box-shadow: 0 80px 0 0 var(--tab-bg); }
 }
 .tabbar::before {
   /* indicador que desliza até a aba ativa */
