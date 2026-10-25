@@ -391,16 +391,6 @@ function telaAprender() {
   render(`
     <a class="back rise" style="--i:0" href="#/terco">${ICON_BACK} Terço</a>
     ${(delayIdx = 1, '')}
-    <p ${r()}><span class="eyebrow">Para quem está começando</span></p>
-    <h1 ${r()}>Como se reza o <em>terço</em></h1>
-    <ol ${rc('steps')} style="margin-top:24px">
-      <li><span class="n">1</span><span class="t">Na cruz</span><span class="d">Faça o sinal da cruz e reze o Creio.</span></li>
-      <li><span class="n">2</span><span class="t">Nas primeiras contas</span><span class="d">Um Pai-nosso, três Ave-Marias (pela fé, pela esperança e pela caridade) e um Glória.</span></li>
-      <li><span class="n">3</span><span class="t">Cinco dezenas</span><span class="d">Em cada uma: anuncie o mistério e medite nele, reze um Pai-nosso, dez Ave-Marias, um Glória e o “Ó meu Jesus”.</span></li>
-      <li><span class="n">4</span><span class="t">No fim</span><span class="d">Reze a Salve-Rainha e faça o sinal da cruz.</span></li>
-    </ol>
-    <p ${rc('muted small')} style="margin-top:16px">Os mistérios mudam conforme o dia: gozosos na segunda e no sábado, dolorosos na terça e na sexta, gloriosos na quarta e no domingo, luminosos na quinta.</p>
-    <hr ${rc('rule')}>
     <p ${r()}><span class="eyebrow">As orações · conta por conta</span></p>
     <p ${rc('lead')}>Toque numa conta para ver a oração. Comece pela cruz, embaixo, e suba.</p>
     <div ${r()} style="margin-top:18px">
@@ -417,6 +407,17 @@ function telaAprender() {
         <div class="cp-nav"><button class="btn ghost" data-passo="-1">Anterior</button><button class="btn solid" data-passo="1">Próxima</button></div>
       </aside>
     </div>
+    <hr ${rc('rule')}>
+    <p ${r()}><span class="eyebrow">Para quem está começando</span></p>
+    <h2 ${r()}>Como se reza o <em>terço</em></h2>
+    <p ${rc('muted small')} style="margin-top:14px">Os mistérios mudam conforme o dia: gozosos na segunda e no sábado, dolorosos na terça e na sexta, gloriosos na quarta e no domingo, luminosos na quinta.</p>
+    <ol ${rc('steps')} style="margin-top:18px">
+      <li><span class="n">1</span><span class="t">Na cruz</span><span class="d">Faça o sinal da cruz e reze o Creio.</span></li>
+      <li><span class="n">2</span><span class="t">Nas primeiras contas</span><span class="d">Um Pai-nosso, três Ave-Marias (pela fé, pela esperança e pela caridade) e um Glória.</span></li>
+      <li><span class="n">3</span><span class="t">Cinco dezenas</span><span class="d">Em cada uma: anuncie o mistério e medite nele, reze um Pai-nosso, dez Ave-Marias, um Glória e o “Ó meu Jesus”.</span></li>
+      <li><span class="n">4</span><span class="t">No fim</span><span class="d">Reze a Salve-Rainha e faça o sinal da cruz.</span></li>
+    </ol>
+
     <div ${r()} style="margin-top:28px"><a class="btn solid block" href="#/terco/rezar/${POR_DIA[new Date().getDay()]}">Rezar o terço de hoje</a></div>
   `);
 
