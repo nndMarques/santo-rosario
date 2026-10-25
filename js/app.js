@@ -441,10 +441,10 @@ function telaAprender() {
         </div>`;
       const o = ORACOES[it.o];
       return `<div class="cp-or">
-        <h3>${o[l1].t} <span class="muted">· ${o[l2].t}</span></h3>
+        <h3 lang="${l1}">${o[l1].t} <span class="muted" lang="${l2}">· ${o[l2].t}</span></h3>
         ${it.intencao !== undefined ? `<p class="cp-int">${INTENCOES_INICIAIS[l1][it.intencao]}</p>` : ''}
-        <p class="pt">${textoOracao(it.o, l1)}</p>
-        <p class="la">${textoOracao(it.o, l2)}</p>
+        <p class="pt" lang="${l1}">${textoOracao(it.o, l1)}</p>
+        <p class="la" lang="${l2}">${textoOracao(it.o, l2)}</p>
       </div>`;
     }).join('') + (info.medita ? `<p class="cp-int">Meditando: ${info.medita[l1]}</p>` : '');
     $painel.querySelector('.cp-corpo').scrollTop = 0;
@@ -551,8 +551,8 @@ function telaRezar(conjunto) {
         return `<div class="et-or">
           <h3>${o.t}${it.vezes ? ` <span class="vezes">× ${it.vezes}</span>` : ''}</h3>
           ${it.vezes === 3 ? `<p class="cp-int">${INTENCOES_INICIAIS[l].join(' · ')}</p>` : ''}
-          <p class="ptext">${textoOracao(it.o, l)}</p>
-          ${l !== l1 ? `<p class="alt">${esc(ORACOES[it.o][l1].x)}</p>` : ''}
+          <p class="ptext" lang="${l}">${textoOracao(it.o, l)}</p>
+          ${l !== l1 ? `<p class="alt" lang="${l1}">${esc(ORACOES[it.o][l1].x)}</p>` : ''}
           ${it.vezes ? `<div class="contador" data-cont="${i}:${j}">
             <div class="beads">${Array.from({ length: it.vezes }, (_, b) => `<button class="bead${b < n ? ' done' : ''}" data-b="${b}" aria-label="Ave-Maria ${b + 1}"></button>`).join('')}</div>
             <span class="cnt">${n ? `${n} de ${it.vezes}` : 'Toque nas contas para contar, se quiser'}</span>
