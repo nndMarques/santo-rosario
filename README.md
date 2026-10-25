@@ -1,4 +1,4 @@
-# Terço
+# Santo Rosário
 
 Aprenda a rezar o terço e reze todos os dias.
 

@@ -699,7 +699,7 @@ function telaMais() {
   const tercos = store.get('tercosRezados', 0);
   render(`
     <p ${r()}><span class="eyebrow">Ajustes</span></p>
-    <h1 ${r()}>Ter<em>ço</em></h1>
+    <h1 ${r()}>Santo <em>Rosário</em></h1>
     <p ${rc('lead')}>Aprenda a rezar o terço e reze todos os dias.</p>
     <hr ${rc('rule')}>
     <div ${rc('setting')}>
