@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terço</title>
+  <meta name="description" content="Aprenda a rezar o terço, conta por conta, e reze todos os dias. Português, latim, inglês e italiano. Tudo fica no seu celular.">
+  <meta name="theme-color" content="#0d0c0a" id="meta-theme">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Terço">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    // Aplica o tema antes de pintar, para não piscar.
+    (function () {
+      var t = 'auto';
+      try { t = localStorage.getItem('terco.theme') || 'auto'; } catch (e) {}
+      if (t !== 'auto') document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <main id="view" class="view" tabindex="-1"></main>
+
+  <nav class="tabbar" aria-label="Seções">
+    <span class="brand">Ter<em>ço</em></span>
+    <a href="#/" data-tab="terco">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="5.5"/><circle cx="12" cy="3.5" r="1"/><circle cx="6.5" cy="9" r="1"/><circle cx="17.5" cy="9" r="1"/><path d="M12 14.5v3.5M10 20h4M12 18v4"/></svg>
+      <span>Rezar</span>
+    </a>
+    <a href="#/terco/aprender" data-tab="aprender">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5C6.5 4.5 9.5 4.5 12 6c2.5-1.5 5.5-1.5 8-.5v13c-2.5-1-5.5-1-8 .5-2.5-1.5-5.5-1.5-8-.5z"/><path d="M12 6v13"/></svg>
+      <span>Aprender</span>
+    </a>
+    <a href="#/mais" data-tab="mais">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+      <span>Ajustes</span>
+    </a>
+  </nav>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
