@@ -413,7 +413,7 @@ function telaAprender() {
     <p ${rc('muted small')} style="margin-top:14px">Os mistérios mudam conforme o dia: gozosos na segunda e no sábado, dolorosos na terça e na sexta, gloriosos na quarta e no domingo, luminosos na quinta.</p>
     <ol ${rc('steps')} style="margin-top:18px">
       <li><span class="n">1</span><span class="t">Na cruz</span><span class="d">Faça o sinal da cruz e reze o Creio.</span></li>
-      <li><span class="n">2</span><span class="t">Nas primeiras contas</span><span class="d">Um Pai-nosso, três Ave-Marias (pela fé, pela esperança e pela caridade) e um Glória.</span></li>
+      <li><span class="n">2</span><span class="t">Nas primeiras contas</span><span class="d">Um Pai-nosso, três Ave-Marias (pela fé, pela esperança e pela caridade), um Glória e o “Ó meu Jesus”.</span></li>
       <li><span class="n">3</span><span class="t">Cinco dezenas</span><span class="d">Em cada uma: anuncie o mistério e medite nele, reze um Pai-nosso, dez Ave-Marias, um Glória e o “Ó meu Jesus”.</span></li>
       <li><span class="n">4</span><span class="t">No fim</span><span class="d">Reze a Salve-Rainha e faça o sinal da cruz.</span></li>
     </ol>
@@ -487,7 +487,7 @@ function telaAprender() {
 // O rosário completo reza os quatro conjuntos em seguida: vinte mistérios.
 function etapasDoTerco(conjunto) {
   const conjs = conjunto === 'rosario' ? ORDEM_ROSARIO : [conjunto];
-  const e = [{ grupo: 'inicio', conj: conjs[0], itens: [{ o: 'sinal' }, { o: 'credo' }, { o: 'pai' }, { o: 'ave', vezes: 3 }, { o: 'gloria' }] }];
+  const e = [{ grupo: 'inicio', conj: conjs[0], itens: [{ o: 'sinal' }, { o: 'credo' }, { o: 'pai' }, { o: 'ave', vezes: 3 }, { o: 'gloria' }, { o: 'fatima' }] }];
   conjs.forEach((c) => {
     for (let k = 0; k < 5; k++) e.push({ grupo: k, conj: c, itens: [{ misterio: k }, { o: 'pai' }, { o: 'ave', vezes: 10 }, { o: 'gloria' }, { o: 'fatima' }] });
   });

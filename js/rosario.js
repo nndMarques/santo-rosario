@@ -27,7 +27,7 @@ export function oracoesDa(id, conjunto) {
   if (id === 'medalha') return { onde: 'Na medalha · conclusão', itens: [{ o: 'gloria' }, { o: 'fatima' }, { o: 'salve' }, { o: 'sinal' }] };
   if (id[0] === 'p') {
     const k = +id.slice(1) - 1;
-    const antes = k === 0 ? [{ o: 'gloria' }] : [{ o: 'gloria' }, { o: 'fatima' }];
+    const antes = [{ o: 'gloria' }, { o: 'fatima' }];
     return {
       onde: k === 0 ? 'Conta grande · antes da primeira dezena' : `Conta grande · depois da ${k}ª dezena`,
       itens: [...antes, { misterio: k, ...M.itens[k] }, { o: 'pai' }],
@@ -95,7 +95,7 @@ export function rosarioSVG() {
     const i = 2 - j;
     contas += conta(`a0-${i}`, px, y, false, i === 1 ? txt(px - 22, y - 2, ['3 Ave-Marias', { t: 'fé, esperança e caridade', c: 'mu' }], 'end', 'lb') : '');
   });
-  contas += conta('p1', px, ry.p1, true, txt(px + 22, ry.p1 - 2, [{ t: '1º mistério', c: 'ac' }, 'Glória · Pai-nosso'], 'start', 'lb'));
+  contas += conta('p1', px, ry.p1, true, txt(px + 22, ry.p1 - 2, [{ t: '1º mistério', c: 'ac' }, 'Glória e Ó meu Jesus', 'Pai-nosso'], 'start', 'lb'));
 
   // laço: cinco dezenas
   itens.forEach((it) => {
