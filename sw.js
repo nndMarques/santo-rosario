@@ -1,5 +1,5 @@
 // Guarda o app para funcionar sem internet (ex.: dentro da igreja).
-const CACHE = 'terco-v6';
+const CACHE = 'terco-v7';
 const ARQUIVOS = [
   './', 'index.html', 'css/style.css', 'js/app.js', 'js/data/terco.js', 'js/rosario.js', 'js/contagem.js', 'js/config.js',
   'manifest.webmanifest', 'icons/icon.svg', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png',
